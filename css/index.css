@@ -1,99 +1,133 @@
-body{
-    background-color: #2B2B2B;
+body {
+  position: relative;
+  background-color: #2b2b2b;
 }
- td, th {
-    border: 1px solid black;
-    background-color: rgb(236, 144, 32);
+td,
+th {
+  border: 1px solid black;
+  background-color: rgb(236, 144, 32);
 }
-  
+
 table {
-    width: 30%;
-    height: 800px;
-    border-collapse: collapse;
-}   
-.arm{
-    margin-left: 15%;
-    margin-right: auto;
+  width: 30%;
+  height: 800px;
+  border-collapse: collapse;
 }
-.bone{
-    width: 100%;
-    height: 10px;
-    background-color: rgb(228, 222, 192);
-    border: 0px solid;
+.arm {
+  margin-left: 15%;
+  margin-right: auto;
 }
-td{
-    width: 16%;
-    height: 50px;   
+.bone {
+  width: 100%;
+  height: 10px;
+  background-color: rgb(228, 222, 192);
+  border: 0px solid;
 }
-td:hover{
-    background-color: rgb(187, 103, 0);
-    cursor: pointer;
+td {
+  position: relative;
+  width: 16%;
+  height: 50px;
 }
-.ropes{
-    height: 10px;
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Courier New';
-    padding: 3px 3px 3px 3px;
+.ropes {
+  height: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Courier New";
+  padding: 3px 3px 3px 3px;
 }
-.ropes:hover{
-    background-color: rgb(236, 144, 32);
-    cursor: auto;
+.ropes:hover {
+  background-color: rgb(236, 144, 32);
+  cursor: auto;
 }
-.numFret{
-    background-color: #2B2B2B;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: 0px solid;
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Courier New';
-    color:#fff;
-    
+.numFret {
+  background-color: #2b2b2b;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 0px solid;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Courier New";
+  color: #fff;
 }
-.refact{
-    background-color: #2B2B2B;
-    border: 0px solid;
+.refact {
+  background-color: #2b2b2b;
+  border: 0px solid;
 }
-.numFret:hover, .refact:hover{
-    background-color: #2B2B2B; 
-    cursor: auto;
+.numFret:hover,
+.refact:hover {
+  background-color: #2b2b2b;
+  cursor: auto;
 }
-.containerNote{
-    background-color: rgb(85, 228, 85);
-    width: 200px;
-    height: 200px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.containerNote {
+  background-color: rgb(85, 228, 85);
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#noteResult{
-    font-size: 50px;
+#noteResult {
+  font-size: 50px;
 }
 .btn {
-    background-color: #4e4caf;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Courier New';
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-left: 15%;
-    position: relative;
-    bottom: 25px;
+  position: relative;
+  background-color: #4e4caf;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Courier New";
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 15%;
+  bottom: 25px;
 }
-.btn:hover{
-    background-color: #323096;
+.btn:hover {
+  background-color: #323096;
 }
-.containerResult{
-    width: 15%;
-    height: 30%;
-    position: absolute;
-    top: 50%;
-    right: 20%;
+.containerResult {
+  width: 15%;
+  height: 30%;
+  position: absolute;
+  top: 50%;
+  right: 20%;
+}
+#box input:checked ~ .checkmark {
+  background-color: rgb(187, 103, 0);
+}
+/* Contenedor */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+/* escondemos el default checkbox */
+.container input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* creamos un custom checkbox */
+.checkmark {
+  position: absolute;
+  margin-bottom: auto;
+  margin-right: auto;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(175, 154, 127);
+}
+/* Al pasar el mouse encima, lo ponemos gris */
+.container:hover input ~ .checkmark {
+  background-color: rgb(187, 103, 0);
+}
+/* estilo del marcador */
+.container .checkmark:after {
+  border: solid rgb(187, 103, 0);
 }
